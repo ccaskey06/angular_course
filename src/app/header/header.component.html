@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
   <div class="container-fluid">
     <div class="navbar-header me-4">
       <a href="#" class="navbar-brand">Recipe Book</a>
@@ -18,10 +18,24 @@
     <div class="navbar-collapse collapse" id="navbarLinks">
       <ul class="navbar-nav me-auto mb-md-0 mb-2">
         <li class="nav-item">
-          <a href="#" class="nav-link">Recipes</a>
+          <a
+            class="nav-link"
+            [ngClass]="{ 'active': activeFeature === 'recipes' }"
+            (click)="onSelected('recipes')"
+            style="cursor: pointer;"
+          >
+            Recipes
+          </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Shopping List</a>
+          <a
+            class="nav-link"
+            [ngClass]="{ 'active': activeFeature === 'shopping-list' }"
+            (click)="onSelected('shopping-list')"
+            style="cursor: pointer;"
+          >
+            Shopping List
+          </a>
         </li>
       </ul>
       <hr />

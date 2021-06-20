@@ -1,1 +1,17 @@
-<p>recipe-item works!</p>
+<a
+  class="list-group-item list-group-item-action clearfix d-flex justify-content-between align-items-center"
+  (click)="onSelected()"
+>
+  <div class="float-left me-auto">
+    <h4 class="mb-2 mt-2">{{ recipe.getRecipeName() }}</h4>
+    <p class="">{{ recipe.getRecipeDescription() }}</p>
+  </div>
+  <span class="float-right">
+    <img
+      src="{{ recipe.getRecipeImage() }}"
+      alt="{{ recipe.getRecipeName() }}"
+      class="img-thumbnail"
+      style="max-height: 100px;"
+    >
+  </span>
+</a>
