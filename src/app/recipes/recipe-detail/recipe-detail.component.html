@@ -1,11 +1,16 @@
 <div class="row">
   <div class="col-xs-12">
-    <img src="" alt="" class="img-fluid">
+    <img
+      src="{{ recipe.getRecipeImage() }}"
+      alt="{{ recipe.getRecipeName() }}"
+      class="img-fluid"
+      style="max-height: 300px;"
+    >
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1>Recipe Name</h1>
+    <h1>{{ recipe.getRecipeName() }}</h1>
   </div>
 </div>
 <div class="row">
@@ -29,6 +34,11 @@
         <li><a href="#" class="dropdown-item">Delete Recipe</a></li>
       </ul>
     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{ recipe.getRecipeDescription() }}
   </div>
 </div>
 <div class="row">
