@@ -1,6 +1,7 @@
 <a
   class="list-group-item list-group-item-action clearfix d-flex justify-content-between align-items-center"
-  (click)="onSelected()"
+  [routerLink]="[recipeId]"
+  routerLinkActive="active"
 >
   <div class="float-left me-auto">
     <h4 class="mb-2 mt-2">{{ recipe.getRecipeName() }}</h4>
