@@ -1,7 +1,17 @@
+import { Ingredient } from "../shared/ingredient.model";
 
 export class Recipe {
+  private name: string;
+  private description: string;
+  private imagePath: string;
+  private ingredients: Ingredient[];
 
-  constructor(private name: string, private description: string, private imagePath: string) {}
+  constructor(name: string, description: string, imagePath: string, ingredients: Ingredient[]) {
+    this.name = name;
+    this.description = description;
+    this.imagePath = imagePath;
+    this.ingredients = ingredients;
+  }
 
   public getRecipeName(): string {
     return this.name;
@@ -13,5 +23,9 @@ export class Recipe {
 
   public getRecipeImage(): string {
     return this.imagePath;
+  }
+
+  public getIngredients(): Ingredient[] {
+    return this.ingredients;
   }
 }
