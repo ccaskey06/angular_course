@@ -36,6 +36,10 @@ export class RecipeService {
     return this.recipes.slice(); // copy the array
   }
 
+  getRecipe(index: number) {
+    return this.recipes[index];
+  }
+
   addRecipe(recipe: Recipe): void {
     this.recipes.push(recipe);
   }
