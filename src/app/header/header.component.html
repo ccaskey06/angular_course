@@ -1,7 +1,12 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
   <div class="container-fluid">
     <div class="navbar-header me-4">
-      <a href="#" class="navbar-brand">Recipe Book</a>
+      <a
+        routerLink="/"
+        class="navbar-brand"
+      >
+        Recipe Book
+      </a>
     </div>
     <button
       class="navbar-toggler"
@@ -20,9 +25,8 @@
         <li class="nav-item">
           <a
             class="nav-link"
-            [ngClass]="{ 'active': activeFeature === 'recipes' }"
-            (click)="onSelected('recipes')"
-            style="cursor: pointer;"
+            routerLink="/recipes"
+            routerLinkActive="active"
           >
             Recipes
           </a>
@@ -30,9 +34,8 @@
         <li class="nav-item">
           <a
             class="nav-link"
-            [ngClass]="{ 'active': activeFeature === 'shopping-list' }"
-            (click)="onSelected('shopping-list')"
-            style="cursor: pointer;"
+            routerLink="/shopping-list"
+            routerLinkActive="active"
           >
             Shopping List
           </a>
